@@ -1,0 +1,2595 @@
+# Copyright (C) 2026 DEV3 Technologies
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DEV3 AI Product Image Studio for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dev3-ai-product-image-studio-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-25T01:31:04+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dev3-ai-product-image-studio-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: dev3-ai-product-image-studio-for-woocommerce.php
+msgid "DEV3 AI Product Image Studio for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dev3-ai-product-image-studio-for-woocommerce.php
+msgid "https://dev3.tech/item/dev3-ai-product-image-studio-for-woocommerce"
+msgstr ""
+
+#. Description of the plugin
+#: dev3-ai-product-image-studio-for-woocommerce.php
+msgid "AI background removal, white-background pack shots, lifestyle scenes, upscaling and alt text for WooCommerce product images, with batch mode and before/after approval."
+msgstr ""
+
+#. Author of the plugin
+#: dev3-ai-product-image-studio-for-woocommerce.php
+msgid "DEV3 Technologies"
+msgstr ""
+
+#. Author URI of the plugin
+#: dev3-ai-product-image-studio-for-woocommerce.php
+msgid "https://dev3.tech"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:41
+#: includes/Admin/Product_Integration.php:49
+msgid "DEV3 AI Image Studio"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:70
+#: build/admin.js:2
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/Product_Integration.php:60
+msgid "Add a product image, then edit it here with DEV3 AI: background removal, pack shots, lifestyle scenes, upscaling and alt text."
+msgstr ""
+
+#: includes/Admin/Product_Integration.php:68
+#: includes/Admin/Product_Integration.php:70
+#: includes/Admin/Product_Integration.php:141
+msgid "Open in DEV3 AI Image Studio"
+msgstr ""
+
+#. translators: %d: pending results
+#: includes/Admin/Product_Integration.php:73
+#, php-format
+msgid "%d result waiting for review"
+msgid_plural "%d results waiting for review"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Admin/Product_Integration.php:78
+msgid "Batch edit all images"
+msgstr ""
+
+#: includes/Admin/Product_Integration.php:89
+msgid "Edit images in DEV3 AI Image Studio"
+msgstr ""
+
+#: includes/Admin/Product_Integration.php:120
+msgid "Image Studio"
+msgstr ""
+
+#: includes/Admin/Product_Integration.php:139
+msgid "DEV3 AI"
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:212
+msgid "Unsupported image type."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:216
+msgid "The image data is invalid."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "AI features are turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "Turn AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Storefront AI is turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Turn storefront AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:49
+msgid "No Gemini API key is configured."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:50
+msgid "Open the plugin settings → API Config and paste a key from Google AI Studio."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:63
+#: build/admin.js:2
+msgid "AI paused: the monthly AI budget is reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:64
+msgid "Raise the monthly cap in API Config, or wait until the budget resets on the 1st of next month."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:80
+msgid "The AI service took too long to respond."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:81
+msgid "Try again, shorten the prompt, lower Max Output Tokens, or switch to the faster model."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:89
+msgid "Your server could not reach the AI service (Google Gemini API)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:90
+msgid "Check the server's internet connection or firewall (outbound HTTPS to generativelanguage.googleapis.com)."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: includes/Core3/Api/Api_Error.php:98
+#, php-format
+msgid "Request to the AI service failed: %s"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:99
+#: includes/Core3/Api/Gemini_Client.php:250
+#: includes/Core3/Api/Gemini_Client.php:422
+msgid "Try again in a moment."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:128
+msgid "The Gemini API key is not valid."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:129
+msgid "Create a new key in Google AI Studio and paste it in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "Your Gemini quota is exhausted."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "AI rate limit reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:139
+msgid "Wait for the quota to reset, enable billing on your Google Cloud project, or switch to a model with remaining quota."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:140
+msgid "Wait a few seconds and try again."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:148
+msgid "This API key is not allowed to use Gemini."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:149
+msgid "Enable the Generative Language API for the key's project, and check any key restrictions (HTTP referrer / IP)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:156
+msgid "The selected Gemini model is not available."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:157
+msgid "Pick another model in API Config — click \"Refresh models\" to load the ones your key can use."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:164
+msgid "The AI service is not available in your server's region."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:165
+msgid "Host the site in a supported region or use a key from a supported project."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:172
+msgid "The AI service is temporarily unavailable."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:173
+msgid "This is on Google's side. Try again shortly or switch models."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:180
+msgid "The AI service rejected the request."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:181
+msgid "Adjust the prompt or settings and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:250
+msgid "The AI returned an incomplete embedding batch."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI blocked this image request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI did not return an image."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+#: includes/Core3/Api/Gemini_Client.php:472
+#: includes/Core3/Api/Gemini_Client.php:508
+msgid "Rephrase the prompt and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+msgid "Try again, or describe the image more concretely."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:421
+msgid "The AI returned malformed data."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:471
+msgid "The AI blocked this request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:507
+msgid "The AI stopped because the response was flagged."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:515
+msgid "The AI ran out of output tokens before writing an answer."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:516
+msgid "Increase Max Output Tokens in API Config, or set Reasoning to \"Low\"."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:523
+msgid "The AI returned an empty response."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:524
+msgid "Try again or rephrase the prompt."
+msgstr ""
+
+#: includes/Core3/Api/Prompts.php:124
+msgid "Unknown prompt template."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:90
+msgid "Unknown job type."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:116
+msgid "The job could not be saved."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:238
+#: build/admin.js:1
+msgid "Failed"
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:339
+#: includes/Core3/Rest/Core_Controller.php:112
+msgid "Job not found."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:33
+#: includes/Core3/Core/Privacy.php:34
+#: includes/Core3/Core/Privacy.php:165
+msgid "AI usage log"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/Core3/Core/Privacy.php:85
+#, php-format
+msgid "This site uses %s, which sends the content needed for AI features (for example product details, reviews or form text) to Google Gemini, operated by Google LLC, as a data processor. Only the fields needed for the requested feature are sent. Google's terms and privacy policy apply: https://ai.google.dev/gemini-api/terms"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:87
+msgid "The plugin keeps a usage log (time, feature, token counts and the user account that triggered the request) to show AI usage and costs to administrators. It does not store the prompts."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:169
+msgid "Feature"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:173
+#: build/admin.js:1
+msgid "Model"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:177
+#: build/admin.js:1
+msgid "Tokens"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:181
+msgid "Date"
+msgstr ""
+
+#: includes/Core3/Data/Usage_Repository.php:194
+msgid "Deleted user"
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:72
+msgid "Your session has expired. Reload the editor and try again."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:75
+#: includes/Core3/Rest/Core_Controller.php:115
+#: includes/Rest/Rest_Controller.php:64
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:94
+msgid "Cross-origin requests are not allowed."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:104
+msgid "Too many requests. Please wait a moment."
+msgstr ""
+
+#: includes/Frontend/Compare.php:51
+#: build/blocks.js:1
+msgid "Before & After Image"
+msgstr ""
+
+#: includes/Frontend/Compare.php:144
+msgid "Pick a \"before\" and an \"after\" image for the comparison."
+msgstr ""
+
+#: includes/Frontend/Compare.php:149
+#: build/admin.js:1
+#: build/blocks.js:1
+msgid "Before"
+msgstr ""
+
+#: includes/Frontend/Compare.php:150
+#: build/admin.js:1
+#: build/blocks.js:1
+msgid "After"
+msgstr ""
+
+#. translators: 1: before label, 2: after label
+#: includes/Frontend/Compare.php:167
+#, php-format
+msgid "Drag to compare %1$s and %2$s"
+msgstr ""
+
+#: includes/Plugin.php:124
+msgid "DEV3 AI Product Image Studio needs WooCommerce to be active."
+msgstr ""
+
+#: includes/Rest/Rest_Controller.php:61
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+#: includes/Rest/Rest_Controller.php:180
+msgid "Image not found."
+msgstr ""
+
+#: includes/Rest/Rest_Controller.php:224
+#: includes/Studio/Batch.php:122
+msgid "Recipe not found."
+msgstr ""
+
+#: includes/Rest/Rest_Controller.php:231
+msgid "Approve this result first, then edit it further."
+msgstr ""
+
+#: includes/Rest/Rest_Controller.php:256
+#: includes/Studio/Alt_Text.php:203
+#: includes/Studio/Operations.php:228
+msgid "That attachment is not an image."
+msgstr ""
+
+#: includes/Rest/Rest_Controller.php:269
+msgid "Manual"
+msgstr ""
+
+#: includes/Rest/Rest_Controller.php:289
+msgid "Enter a template, e.g. {product} - {category}."
+msgstr ""
+
+#: includes/Rest/Rest_Controller.php:312
+#: includes/Studio/Batch.php:195
+msgid "Template"
+msgstr ""
+
+#: includes/Rest/Rest_Controller.php:404
+msgid "Unknown bulk action."
+msgstr ""
+
+#: includes/Studio/Alt_Text.php:258
+msgid "Pick a product first."
+msgstr ""
+
+#: includes/Studio/Batch.php:128
+#: includes/Studio/Operations.php:225
+msgid "Unknown operation."
+msgstr ""
+
+#: includes/Studio/Batch.php:131
+#: build/admin.js:2
+msgid "No product images match this selection."
+msgstr ""
+
+#: includes/Studio/Batch.php:134
+#: includes/Studio/Operations.php:245
+msgid "Describe the edit you want."
+msgstr ""
+
+#: includes/Studio/Batch.php:164
+msgid "Invalid item."
+msgstr ""
+
+#: includes/Studio/Batch.php:175
+msgid "The image could not be read."
+msgstr ""
+
+#: includes/Studio/Batch.php:195
+msgid "The template produced empty text."
+msgstr ""
+
+#: includes/Studio/Image_Tools.php:55
+#: includes/Studio/Operations.php:231
+msgid "The PHP GD extension is required for image processing."
+msgstr ""
+
+#: includes/Studio/Image_Tools.php:59
+msgid "The image data could not be read."
+msgstr ""
+
+#: includes/Studio/Image_Tools.php:72
+msgid "The image file is missing."
+msgstr ""
+
+#: includes/Studio/Library.php:230
+msgid "Featured"
+msgstr ""
+
+#: includes/Studio/Library.php:230
+msgid "Gallery"
+msgstr ""
+
+#: includes/Studio/Library.php:233
+msgid "Variation"
+msgstr ""
+
+#. translators: %s: variation attributes
+#: includes/Studio/Library.php:235
+#, php-format
+msgid "Variation: %s"
+msgstr ""
+
+#: includes/Studio/Operations.php:51
+msgid "Background removed"
+msgstr ""
+
+#: includes/Studio/Operations.php:52
+#: build/admin.js:1
+msgid "White pack shot"
+msgstr ""
+
+#: includes/Studio/Operations.php:53
+#: build/admin.js:1
+msgid "Lifestyle scene"
+msgstr ""
+
+#: includes/Studio/Operations.php:54
+msgid "AI upscaled"
+msgstr ""
+
+#: includes/Studio/Operations.php:55
+msgid "AI edit"
+msgstr ""
+
+#: includes/Studio/Operations.php:56
+#: build/admin.js:1
+msgid "Square canvas"
+msgstr ""
+
+#: includes/Studio/Operations.php:57
+msgid "Upscaled"
+msgstr ""
+
+#: includes/Studio/Operations.php:58
+msgid "Flattened"
+msgstr ""
+
+#: includes/Studio/Operations.php:59
+msgid "Converted"
+msgstr ""
+
+#: includes/Studio/Operations.php:60
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Alt text"
+msgstr ""
+
+#: includes/Studio/Operations.php:61
+msgid "Alt text (template)"
+msgstr ""
+
+#: includes/Studio/Operations.php:62
+msgid "Image audit"
+msgstr ""
+
+#: includes/Studio/Operations.php:237
+msgid "Transparent background"
+msgstr ""
+
+#: includes/Studio/Recipes.php:28
+msgid "Kitchen counter"
+msgstr ""
+
+#: includes/Studio/Recipes.php:33
+msgid "Marble slab"
+msgstr ""
+
+#: includes/Studio/Recipes.php:38
+msgid "Wooden table"
+msgstr ""
+
+#: includes/Studio/Recipes.php:43
+msgid "Outdoor nature"
+msgstr ""
+
+#: includes/Studio/Recipes.php:48
+msgid "Studio gradient"
+msgstr ""
+
+#: includes/Studio/Recipes.php:53
+msgid "Holiday gift"
+msgstr ""
+
+#: includes/Studio/Recipes.php:58
+msgid "Bathroom shelf"
+msgstr ""
+
+#: includes/Studio/Recipes.php:63
+msgid "Work desk"
+msgstr ""
+
+#: includes/Studio/Recipes.php:84
+msgid "Marketplace white 1:1"
+msgstr ""
+
+#: includes/Studio/Recipes.php:95
+msgid "Transparent PNG"
+msgstr ""
+
+#: includes/Studio/Recipes.php:101
+msgid "Kitchen lifestyle 4:5"
+msgstr ""
+
+#: includes/Studio/Recipes.php:111
+msgid "HD upscale 2x"
+msgstr ""
+
+#: includes/Studio/Recipes.php:117
+msgid "Square pad (no AI)"
+msgstr ""
+
+#: includes/Studio/Recipes.php:193
+msgid "Every recipe needs a name and a valid operation."
+msgstr ""
+
+#: includes/Studio/Recipes.php:216
+msgid "Every scene needs a name and a description."
+msgstr ""
+
+#: includes/Studio/Results.php:108
+msgid "The result could not be saved."
+msgstr ""
+
+#: includes/Studio/Results.php:316
+msgid "The result image is invalid."
+msgstr ""
+
+#. translators: 1: product name, 2: operation label
+#: includes/Studio/Results.php:337
+#, php-format
+msgid "%1$s - %2$s"
+msgstr ""
+
+#. translators: 1: product name, 2: operation label
+#: includes/Studio/Results.php:337
+#: build/admin.js:1
+msgid "Image"
+msgstr ""
+
+#: includes/Studio/Results.php:450
+#: includes/Studio/Results.php:519
+msgid "Result not found."
+msgstr ""
+
+#: includes/Studio/Results.php:453
+#: includes/Studio/Results.php:522
+msgid "This result was already reviewed."
+msgstr ""
+
+#: includes/Studio/Results.php:467
+msgid "The result image no longer exists."
+msgstr ""
+
+#: includes/Studio/Results.php:473
+msgid "The original image is no longer used by this product. Approve it with \"Add to gallery\" or \"Keep in library\" instead."
+msgstr ""
+
+#: includes/Studio/Results.php:554
+msgid "Only approved results can be reverted."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Request cancelled."
+msgstr ""
+
+#: build/admin.js:1
+msgid "You appear to be offline."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your internet connection, then try again."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Could not reach your WordPress site."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your connection or reload the editor."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your session has expired."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save your work and reload the page."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Something went wrong."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Loading"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generating…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generate with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused: monthly budget reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Adjust the cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Try again"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use a hex colour like #4f46e5."
+msgstr ""
+
+#: build/admin.js:1
+msgid "picker"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Queued"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Running"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Background job"
+msgstr ""
+
+#. translators: 1: processed, 2: total, 3: percent
+#: build/admin.js:1
+#, js-format
+msgid "%1$s of %2$s processed (%3$s%%)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Starting…"
+msgstr ""
+
+#. translators: %s: failed count
+#: build/admin.js:1
+#, js-format
+msgid "%s failed"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Cancel"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Resume"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Retry failed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Show failed items"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimated AI spend this month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI off"
+msgstr ""
+
+#. translators: %s: cap
+#: build/admin.js:1
+#, js-format
+msgid "of %s cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI turned off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused · cap reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Near cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget used"
+msgstr ""
+
+#. translators: 1: requests, 2: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s requests · %2$s tokens"
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:1
+#, js-format
+msgid "resets %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Set a monthly cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss notification"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose from list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom model ID…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Google Gemini API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create a free key in Google AI Studio, paste it here and click “Validate & save”. The key is encrypted in your database and never sent to the browser."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Get an API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The key is defined by the DEV3IS_GEMINI_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key"
+msgstr ""
+
+#. translators: %d: number of models
+#: build/admin.js:1
+#, js-format
+msgid "Connected — %d models available to this key."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Validate & save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key removed."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OpenSSL is not available on this server, so the key is only obfuscated. Consider defining DEV3IS_GEMINI_API_KEY in wp-config.php instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Models & generation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast is used for most tasks; Pro for complex, long-form or structured work."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Engine settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save engine settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-flash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pro model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-pro"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Image model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for image generation. Default: gemini-2.5-flash-image"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Embedding model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for semantic search. Default: gemini-embedding-001"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Temperature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lower = focused and consistent, higher = more creative (0–1)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Max output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upper limit per answer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasoning"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Low” keeps generations fast and cheap; “Auto” lets the model think longer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low (fast)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto (model decides)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Costs are estimated from token counts and Google’s list prices. Check exact billing in Google AI Studio."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget and safety settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI pauses when the estimated spend this month reaches the cap. 0 = no cap."
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI features"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Turn off to stop every AI call. The plugin keeps working without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Storefront AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Kill switch for visitor-facing AI. Visitors get the non-AI fallback."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cache AI results"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reuse answers for identical requests to save tokens."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mask personal data"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace emails, phone and card numbers before text is sent to Google Gemini."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pagination"
+msgstr ""
+
+#. translators: 1: first row, 2: last row, 3: total rows
+#: build/admin.js:1
+#, js-format
+msgid "%1$s–%2$s of %3$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Previous page"
+msgstr ""
+
+#. translators: 1: page, 2: pages
+#: build/admin.js:1
+#, js-format
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Next page"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Actions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing here yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sort by"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Est. cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Token counts come from the AI provider’s usage metadata; costs are estimates. Check exact billing in Google AI Studio / Cloud Console."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Period"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 7 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 30 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 90 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Total tokens"
+msgstr ""
+
+#. translators: 1: input, 2: output
+#: build/admin.js:1
+#, js-format
+msgid "%1$s in · %2$s out"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Avg. response"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Errors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day chart"
+msgstr ""
+
+#. translators: 1: date, 2: requests, 3: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s — %2$s requests, %3$s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests in this period yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage appears here as soon as an AI feature runs."
+msgstr ""
+
+#: build/admin.js:1
+msgid "By task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "User"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests logged yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time (s)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Status"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Plugin sections"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Section"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Close"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Accept"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Changes"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Side by side"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not saved yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft view"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit JSON"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Current"
+msgstr ""
+
+#. translators: %s: token count
+#: build/admin.js:1
+#, js-format
+msgid "%s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cached"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Reject"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Regenerate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done editing"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Edit"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The JSON is not valid. Fix it or regenerate."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove background"
+msgstr ""
+
+#: build/admin.js:1
+msgid "White, colour or transparent background."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Studio pack shot, centred on a square canvas."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Place the product in a photorealistic setting."
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI upscale"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Restore detail, then enlarge 2-4x."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom edit"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Describe any change in plain words."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Trim, centre and pad. No AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Resize up"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Enlarge with sharpening. No AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Flatten"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fill transparency with a colour. No AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Convert format"
+msgstr ""
+
+#: build/admin.js:1
+msgid "PNG, JPEG or WebP copy. No AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Alt text with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Vision alt text, title and caption drafts."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Alt text from a template"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fill alt text from product data. No AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Audit images"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Measure background whiteness for the filters."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Background colour"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Product fill (%)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "How much of the canvas the product covers."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Canvas size (px)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "0 = automatic."
+msgstr ""
+
+#: build/admin.js:1
+msgid "New background"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pure white"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Solid colour"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Transparent (PNG)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI paints a key colour behind the product, then the plugin cuts it out locally."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Soft contact shadow"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Scene"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom description…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Aspect ratio"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Variants"
+msgstr ""
+
+#: build/admin.js:1
+msgid "One AI image per variant."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom description (optional, replaces the preset)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Describe the setting"
+msgstr ""
+
+#: build/admin.js:1
+msgid "e.g. on a sunny café table with a croissant and a latte"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Enlarge by"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Or long edge (px)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "0 = use the factor. Capped by the max size in Settings."
+msgstr ""
+
+#: build/admin.js:1
+msgid "What should change?"
+msgstr ""
+
+#: build/admin.js:1
+msgid "e.g. Remove the price sticker and straighten the label"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Transparent canvas"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Format"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Quality"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Alt text template"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Placeholders: {product} {category} {sku} {site} {n} {attribute:pa_color}"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Waiting for review"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Approved"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Rejected"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Reverted"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace in product"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add to gallery"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Keep in library only"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No alt text"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low-res"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not on white"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not square"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Looks good"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fix backgrounds"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Find photos that are not on white and turn them into clean pack shots."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upscale small photos"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Images under your minimum size, ready for AI upscaling."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Write alt text"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Accessible, SEO-friendly alt text from the photo itself."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Make them square"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Even grids: centre and pad to 1:1 without AI."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Dashboard"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The health of your product photos and what DEV3 AI has prepared for review."
+msgstr ""
+
+#: build/admin.js:1
+msgid "New batch"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Browse product images"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connect DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add your API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add a Google Gemini API key to remove backgrounds, create pack shots and lifestyle scenes, upscale and write alt text. Square canvas, resizing, format conversion, alt templates and the review queue work without it."
+msgstr ""
+
+#: build/admin.js:1
+msgid "PHP GD is missing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Ask your host to enable the PHP GD extension. The studio needs it to read and write images."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Product images"
+msgstr ""
+
+#. translators: %s: products
+#: build/admin.js:1
+#, js-format
+msgid "across %s products"
+msgstr ""
+
+#. translators: %s: approved
+#: build/admin.js:1
+#, js-format
+msgid "%s approved so far"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Missing alt text"
+msgstr ""
+
+#. translators: %d: percent
+#: build/admin.js:1
+#, js-format
+msgid "%d%% of images"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low resolution"
+msgstr ""
+
+#. translators: %d: px
+#: build/admin.js:1
+#, js-format
+msgid "shortest side under %dpx"
+msgstr ""
+
+#. translators: %s: count
+#: build/admin.js:1
+#, js-format
+msgid "%s not audited yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "all images audited"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Quick fixes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open the library filtered to the images that need it, select them and run a batch."
+msgstr ""
+
+#. translators: %s: count
+#: build/admin.js:1
+#, js-format
+msgid "%s images"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All good"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Latest results"
+msgstr ""
+
+#: build/admin.js:1
+msgid "New images are saved as separate drafts. Your originals are never changed."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open review queue"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No results yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open a product image in the studio, or run a batch over many products."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pick an image"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Missing alt"
+msgstr ""
+
+#: build/admin.js:1
+msgid "In review"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "All images"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Featured only"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Gallery only"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Variations only"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Select"
+msgstr ""
+
+#: build/admin.js:1
+#, js-format
+msgid "Select %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Product"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Size"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Health"
+msgstr ""
+
+#: build/admin.js:1
+#, js-format
+msgid "%d in review"
+msgid_plural "%d in review"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+msgid "Every featured, gallery and variation image in your store. Select images to batch them, or open one in the studio."
+msgstr ""
+
+#. translators: %d: selected images
+#: build/admin.js:1
+#, js-format
+msgid "Batch %d image"
+msgid_plural "Batch %d images"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+msgid "Batch selected"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Filter images"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Some images are not audited yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Audit started. Follow it on the Batch screen."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Audit all images"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Background whiteness is measured once per image and cached. This page audits up to 150 new images per load; run a background audit to measure the rest."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Search products"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Search by product name or SKU…"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Category"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All categories"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Image type"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Select all on this page"
+msgstr ""
+
+#. translators: %s: images
+#: build/admin.js:1
+#: build/admin.js:2
+#, js-format
+msgid "%s image"
+msgid_plural "%s images"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: selected
+#: build/admin.js:1
+#, js-format
+msgid "%d selected"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Clear"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open in studio"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing matches"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No product images yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Try another filter or search."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add images to your WooCommerce products and they appear here."
+msgstr ""
+
+#: build/admin.js:2
+#, js-format
+msgid "Compare %1$s and %2$s"
+msgstr ""
+
+#. translators: %d: percent of the before image shown
+#: build/admin.js:2
+#, js-format
+msgid "%d%% before"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Slider"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Title"
+msgstr ""
+
+#: build/admin.js:2
+#: build/blocks.js:1
+msgid "Caption"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Approved. The new image is live."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Rejected and discarded."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Reverted. The original is back."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Alt text saved."
+msgstr ""
+
+#. translators: %d: result id
+#: build/admin.js:2
+#, js-format
+msgid "Select result %d"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Save alt text"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Revert"
+msgstr ""
+
+#: build/admin.js:2
+msgid "The result image was deleted."
+msgstr ""
+
+#. translators: %s: seconds
+#: build/admin.js:2
+#, js-format
+msgid "%ss"
+msgstr ""
+
+#. translators: %d: variant
+#: build/admin.js:2
+#, js-format
+msgid "Variant %d"
+msgstr ""
+
+#: build/admin.js:2
+msgid "When approved"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Approve"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Full size"
+msgstr ""
+
+#. translators: %d: results
+#: build/admin.js:2
+#, js-format
+msgid "%d new drafts ready for review."
+msgstr ""
+
+#: build/admin.js:2
+msgid "New draft ready for review."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Studio"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Edit one product image at a time and compare every result before it goes live."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Pick an image to start"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Open any product image from the library, the product edit screen or the media library."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Results are saved as new images. Approve one to use it in the product; the original stays in your media library."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Edit product"
+msgstr ""
+
+#: build/admin.js:2
+msgid "This image is an unapproved result. Approve or reject it in the review queue before editing it further."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Original"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Never modified."
+msgstr ""
+
+#: build/admin.js:2
+msgid "File"
+msgstr ""
+
+#: build/admin.js:2
+msgid "White background"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Describe the photo for screen readers and search engines."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Save"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Write with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Choose an edit"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Start from a recipe"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Start from a recipe…"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Edit type"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Suggest scenes with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:2
+msgid "DEV3 AI is not connected"
+msgstr ""
+
+#: build/admin.js:2
+msgid "API Config"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Add a Google Gemini API key to use AI edits. The tools marked without AI work now."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Takes 10-30 seconds per image. The result is a new draft image."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Runs on your server in a second or two. The result is a new draft image."
+msgstr ""
+
+#: build/admin.js:2
+msgid "DEV3 AI is editing…"
+msgstr ""
+
+#. translators: %s: operation
+#: build/admin.js:2
+#, js-format
+msgid "Create %s"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Results"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:2
+#, js-format
+msgid "%d waiting for your review. Drag the slider to compare."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Drag the slider to compare before and after."
+msgstr ""
+
+#: build/admin.js:2
+msgid "No results for this image yet"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Pick an edit above and run it. Results appear here as drafts."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Everything"
+msgstr ""
+
+#: build/admin.js:2
+#: build/blocks.js:1
+msgid "Images"
+msgstr ""
+
+#: build/admin.js:2
+msgid "All statuses"
+msgstr ""
+
+#. translators: 1: done, 2: failed, 3: first error
+#: build/admin.js:2
+#, js-format
+msgid "%1$d done, %2$d could not be applied: %3$s"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:2
+#, js-format
+msgid "%d result updated."
+msgid_plural "%d results updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:2
+msgid "Review"
+msgstr ""
+
+#. translators: %d: batch id
+#: build/admin.js:2
+#, js-format
+msgid "Results of batch #%d."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Approve the results you like. Approved images replace the original in the product (or join its gallery); rejected ones are discarded."
+msgstr ""
+
+#: build/admin.js:2
+msgid "All results"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Result type"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Approve as"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Reject selected"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:2
+#, js-format
+msgid "Approve %d"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Approve selected"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Nothing to review"
+msgstr ""
+
+#: build/admin.js:2
+msgid "No results here"
+msgstr ""
+
+#: build/admin.js:2
+msgid "New drafts from the studio and from batches land here."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Try another status or type."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Open product images"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Featured image"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Gallery images"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Variation images"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Batch started. You can leave this page; it keeps running."
+msgstr ""
+
+#. translators: %d: images
+#: build/admin.js:2
+#, js-format
+msgid "Selected in the library (%d image)"
+msgid_plural "Selected in the library (%d images)"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: products
+#: build/admin.js:2
+#, js-format
+msgid "Chosen product (%d)"
+msgid_plural "Chosen products (%d)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:2
+msgid "A product category"
+msgstr ""
+
+#: build/admin.js:2
+msgid "All products"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Recipes"
+msgstr ""
+
+#: build/admin.js:2
+msgid "DEV3 AI edits"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Without AI"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Batch"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Run one edit or recipe over many product images in the background. Every result waits in the review queue."
+msgstr ""
+
+#. translators: %s: operation
+#: build/admin.js:2
+#, js-format
+msgid "Running: %s"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Batch progress"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Batch finished with some failures. You can retry them."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Batch finished."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Review results"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Start another batch"
+msgstr ""
+
+#: build/admin.js:2
+msgid "1. Which images"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Products"
+msgstr ""
+
+#: build/admin.js:2
+msgid "No categories"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Only images that are"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Any"
+msgstr ""
+
+#: build/admin.js:2
+msgid "2. What to do"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Edit or recipe"
+msgstr ""
+
+#. translators: %s: operation
+#: build/admin.js:2
+#, js-format
+msgid "Recipe: %s with its saved options. Edit recipes on the Recipes screen."
+msgstr ""
+
+#. translators: %s: calls
+#: build/admin.js:2
+#, js-format
+msgid "%s AI image request"
+msgid_plural "%s AI image requests"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:2
+msgid "Counting images…"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Start batch with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Start batch"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Connect DEV3 AI in API Config to run AI batches. Batches without AI work now."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Recent batches"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Progress"
+msgstr ""
+
+#. translators: 1: done, 2: total, 3: failed
+#: build/admin.js:2
+#, js-format
+msgid "%1$d / %2$d (%3$d failed)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Started"
+msgstr ""
+
+#: build/admin.js:2
+msgid "No batches yet"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Your batches and their progress show up here."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Save an edit with its options once, then use it from the studio or for whole batches."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Restore built-ins"
+msgstr ""
+
+#: build/admin.js:2
+msgid "New recipe"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Name"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Options"
+msgstr ""
+
+#. translators: %s: recipe
+#: build/admin.js:2
+#, js-format
+msgid "Delete %s"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Recipe deleted."
+msgstr ""
+
+#: build/admin.js:2
+msgid "No recipes"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Create one, or restore the built-ins."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Lifestyle scene presets"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Settings that DEV3 AI can place your products in. Describe surface, surroundings and light."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Add scene"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Scenes saved."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Save scenes"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Setting"
+msgstr ""
+
+#. translators: %s: scene
+#: build/admin.js:2
+#, js-format
+msgid "Remove %s"
+msgstr ""
+
+#: build/admin.js:2
+msgid "scene"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Edit recipe"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Recipe saved."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Save recipe"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Recipe name"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Restore built-in recipes?"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Built-in recipes and scenes restored."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Restore"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Your custom recipes and scenes are replaced by the five built-in recipes and eight scenes."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Defaults for new images, the review workflow and alt text."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Output"
+msgstr ""
+
+#: build/admin.js:2
+msgid "How result images are saved. Results are always new files; originals are never touched."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Default background colour"
+msgstr ""
+
+#: build/admin.js:2
+msgid "File format"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Automatic (PNG when transparent, else JPEG)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "JPEG / WebP quality"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Pack shot fill (%)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "How much of the square canvas the product covers."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Max image size (px)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Upper limit for upscales and pack shots."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Low-resolution threshold (px)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Images whose shortest side is smaller are flagged."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Soft shadow on pack shots"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Review workflow"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Default approve action"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Replace the image in the product"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Add to the product gallery"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Keep in the media library only"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Lifestyle scenes are always added to the gallery by default."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Default batch images"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Hide unapproved results from the media library"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Keep files of rejected results"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Off: rejected drafts are deleted."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Scenes & alt text"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Brand style for lifestyle scenes"
+msgstr ""
+
+#: build/admin.js:2
+msgid "e.g. Scandinavian, soft natural light, muted earthy colours"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Alt text template (no AI)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "{product} {category} {sku} {site} {n} {attribute:pa_color}"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Alt text language"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Empty = the site language."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Save settings"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Usage Logs"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Connect Google Gemini, pick the text and image models and set a monthly AI budget."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Requests, tokens and estimated cost of every DEV3 AI feature."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Made by DEV3 Technologies · AI by Google Gemini, using your own API key. Originals are never overwritten."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "A draggable before/after comparison of two images."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "compare"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "slider"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "before after"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Replace \"before\" image"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Choose \"before\" image"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Replace \"after\" image"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Choose \"after\" image"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Start position (%)"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "\"Before\" label"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "\"After\" label"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Pick the \"before\" and \"after\" images. Tip: approved DEV3 AI Image Studio results sit next to their originals in the media library."
+msgstr ""

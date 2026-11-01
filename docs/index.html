@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV3 AI Product Image Studio for WooCommerce: Documentation</title>
+<style>
+:root { --brand: #4f46e5; --text: #1f2328; --muted: #4b5563; --line: #e3e6eb; --soft: #f6f7fb; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header { background: linear-gradient(135deg, #4f46e5, #0891b2); color: #fff; padding: 40px 16px; }
+header .wrap, main { max-width: 980px; margin: 0 auto; }
+header h1 { margin: 0 0 6px; font-size: clamp(24px, 4vw, 34px); }
+header p { margin: 0; opacity: .9; }
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--line); overflow-x: auto; white-space: nowrap; padding: 0 16px; z-index: 2; }
+nav a { display: inline-block; padding: 12px 10px; color: var(--muted); text-decoration: none; font-size: 14px; }
+nav a:hover, nav a:focus { color: var(--brand); }
+main { padding: 8px 16px 64px; }
+h2 { margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 24px; }
+h3 { margin-top: 28px; font-size: 18px; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13.5px; }
+code { background: var(--soft); padding: 2px 6px; border-radius: 4px; }
+pre { background: #0f172a; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; }
+pre code { background: none; padding: 0; color: inherit; }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; display: block; overflow-x: auto; }
+th, td { text-align: left; border-bottom: 1px solid var(--line); padding: 8px 10px; vertical-align: top; }
+th { background: var(--soft); }
+.note { background: #eef2ff; border-left: 4px solid var(--brand); padding: 12px 16px; border-radius: 6px; }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.shots figure { margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.shots img { width: 100%; height: 220px; object-fit: cover; object-position: top; display: block; }
+.shots figcaption { padding: 8px 12px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+	<h1>DEV3 AI Product Image Studio for WooCommerce</h1>
+	<p>Version 1.0.0 · Background removal, pack shots, lifestyle scenes, upscaling and alt text, with batch mode and before/after approval.</p>
+</div></header>
+<nav aria-label="Sections">
+	<a href="#install">Install</a><a href="#gemini">Gemini key</a><a href="#quick">Quick start</a><a href="#library">Product images</a><a href="#studio">Studio</a><a href="#edits">Edits</a><a href="#review">Review</a><a href="#batch">Batch</a><a href="#recipes">Recipes</a><a href="#alt">Alt text</a><a href="#woo">WooCommerce screens</a><a href="#front">Before &amp; After block</a><a href="#settings">Settings</a><a href="#hooks">Hooks</a><a href="#rest">REST API</a><a href="#faq">FAQ</a><a href="#changelog">Changelog</a>
+</nav>
+<main>
+
+<div class="shots">
+	<figure><img src="screenshots/1-dashboard.png" alt="Dashboard"><figcaption>Dashboard</figcaption></figure>
+	<figure><img src="screenshots/2-studio-compare.png" alt="Studio"><figcaption>Studio with compare slider</figcaption></figure>
+	<figure><img src="screenshots/3-review-queue.png" alt="Review queue"><figcaption>Review queue</figcaption></figure>
+	<figure><img src="screenshots/4-batch.png" alt="Batch"><figcaption>Batch mode</figcaption></figure>
+	<figure><img src="screenshots/5-product-images.png" alt="Product images"><figcaption>Product image library</figcaption></figure>
+	<figure><img src="screenshots/6-storefront-before-after-mobile.png" alt="Storefront slider"><figcaption>Storefront before/after (mobile)</figcaption></figure>
+</div>
+
+<h2 id="install">Installation</h2>
+<ol>
+	<li>Requirements: WordPress 6.0+, PHP 7.4+ (tested on 8.3) with the GD extension, WooCommerce 8.0+.</li>
+	<li><strong>Plugins › Add New › Upload Plugin</strong>, choose <code>dev3-ai-product-image-studio-for-woocommerce.zip</code>, install and activate.</li>
+	<li>Open <strong>DEV3 AI Image Studio</strong> in the admin menu.</li>
+</ol>
+<p>No licence key or activation is needed. Updates ship as new zips. HPOS and the Cart/Checkout blocks are declared compatible (the plugin does not touch orders or the cart).</p>
+
+<h2 id="gemini">Google Gemini API key</h2>
+<ol>
+	<li>Go to <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> and create a key (Google account needed).</li>
+	<li>In <strong>API Config</strong> paste the key and click <em>Test connection</em>. It is stored encrypted and never sent to the browser. You can instead define <code>DEV3IS_GEMINI_API_KEY</code> in <code>wp-config.php</code>.</li>
+	<li>Image model: <code>gemini-2.5-flash-image</code> (default). Text model for alt text and scene ideas: <code>gemini-2.5-flash</code>.</li>
+	<li>Set a <strong>monthly budget</strong>: AI pauses when the estimated cost reaches it. Usage Logs show requests, tokens and cost per feature.</li>
+</ol>
+<p class="note">Without a key the AI buttons are disabled, and everything else works: library, audit, square canvas, resize, flatten, convert, alt templates, review and batches of non-AI edits.</p>
+
+<h2 id="quick">Quick start</h2>
+<ol>
+	<li>Open <strong>Product images › Not on white</strong>.</li>
+	<li>Select a few images and click <strong>Batch</strong>, choose the recipe <em>Marketplace white 1:1</em> and start.</li>
+	<li>Open <strong>Review</strong>, drag the sliders, then <strong>Approve</strong> the results you like. They replace the images in the products.</li>
+</ol>
+
+<h2 id="library">Product images (library)</h2>
+<p>Lists every featured, gallery and variation image with product, slot, size, file size, alt text and health badges. Filters: <em>Missing alt</em>, <em>Low-res</em> (shortest side under the threshold in Settings, default 800 px), <em>Not on white</em> (border whiteness under 90%), <em>Not square</em>, <em>In review</em>. Search by product name or SKU, filter by category and image type. Tick images (or <em>Select all on this page</em>) and click <strong>Batch</strong>. Whiteness is measured once per image and cached; <em>Audit all images</em> measures the rest in the background.</p>
+
+<h2 id="studio">Studio</h2>
+<p>Open any image from the library, the product edit screen, the Products list (<em>Image Studio</em> row link) or the media library. Left: the original (never modified), its size, file, whiteness and alt text. Right: pick an edit, set options (or start from a recipe) and run it. Every result appears below as a draft with a before/after slider (drag, touch or arrow keys) or side by side.</p>
+
+<h2 id="edits">Edits</h2>
+<table>
+<tr><th>Edit</th><th>AI</th><th>What it does</th><th>Options</th></tr>
+<tr><td>Remove background</td><td>Yes</td><td>Keeps the product as is, new background. Transparent: the AI paints a key colour, then the plugin keys it out locally into a PNG with alpha (edge softening + spill removal).</td><td>White, colour, transparent</td></tr>
+<tr><td>White pack shot</td><td>Yes</td><td>Studio pack shot, corrected light; then trimmed and centred on a square canvas.</td><td>Colour, fill %, canvas size, soft shadow</td></tr>
+<tr><td>Lifestyle scene</td><td>Yes</td><td>Places the product in a photorealistic setting. <em>Suggest scenes with DEV3 AI</em> proposes 4 settings for the product.</td><td>Preset or description, aspect ratio, 1-4 variants</td></tr>
+<tr><td>AI upscale</td><td>Yes</td><td>Restores detail and removes noise, then resamples to 2-4x (or a long edge), capped by <em>Max image size</em>.</td><td>Factor, long edge</td></tr>
+<tr><td>Custom edit</td><td>Yes</td><td>Any change described in words.</td><td>Instruction</td></tr>
+<tr><td>Square canvas</td><td>No</td><td>Trims the background, centres and pads to 1:1.</td><td>Colour or transparent, fill %, size</td></tr>
+<tr><td>Resize up</td><td>No</td><td>Enlarges with a light sharpen.</td><td>Factor, long edge</td></tr>
+<tr><td>Flatten</td><td>No</td><td>Fills transparency with a colour.</td><td>Colour</td></tr>
+<tr><td>Convert format</td><td>No</td><td>PNG, JPEG or WebP copy.</td><td>Format, quality</td></tr>
+</table>
+<p>Results are named after the product (<code>blue-mug-packshot.jpg</code>) and titled "Product - Edit".</p>
+
+<h2 id="review">Review &amp; approval</h2>
+<p>New results are hidden from the media library until approved (setting). Approve with:</p>
+<ul>
+	<li><strong>Replace in product</strong>: swaps the original for the result wherever the product uses it (featured, the same gallery position, variations). The original stays in the media library.</li>
+	<li><strong>Add to gallery</strong> (default for lifestyle scenes).</li>
+	<li><strong>Keep in library only</strong>.</li>
+</ul>
+<p><strong>Reject</strong> deletes the draft file (unless <em>Keep files of rejected results</em> is on). <strong>Revert</strong> puts the original back. Select several results to approve or reject them in bulk.</p>
+
+<h2 id="batch">Batch mode</h2>
+<p>Choose the products (library selection, chosen products, a category or all products), the images (featured, gallery, variations, all), an optional health filter, and an edit or recipe. The screen shows how many images and AI requests it will make. Batches run in the background on Action Scheduler (bundled with WooCommerce) or WP-Cron, with progress, cancel, retry failed and resume. Batch-only operations: <em>Alt text with DEV3 AI</em>, <em>Alt text from a template</em>, <em>Audit images</em>. Every result waits in the review queue (<em>Review results</em> filters to that batch).</p>
+
+<h2 id="recipes">Recipes &amp; scenes</h2>
+<p>A recipe is an edit with saved options. Built in: Marketplace white 1:1, Transparent PNG, Kitchen lifestyle 4:5, HD upscale 2x, Square pad (no AI). Add, edit or delete recipes and lifestyle scene presets on the Recipes screen; <em>Restore built-ins</em> resets both.</p>
+
+<h2 id="alt">Alt text</h2>
+<ul>
+	<li><strong>Write with DEV3 AI</strong> (studio): the photo, product name, category and attributes go to Gemini; you get alt (≤125 characters), title and caption as a draft with a diff. Accept, edit, regenerate or reject.</li>
+	<li><strong>Templates</strong> (no AI): <code>{product}</code> <code>{category}</code> <code>{sku}</code> <code>{site}</code> <code>{n}</code> <code>{attribute:pa_color}</code>. Empty placeholders are tidied away.</li>
+	<li>Every saved alt text is logged and can be reverted. Language: Settings › Alt text language (empty = site language).</li>
+</ul>
+
+<h2 id="woo">WooCommerce screens</h2>
+<ul>
+	<li><strong>Product edit</strong>: "DEV3 AI Image Studio" side box with the product's images (badge = results waiting) and <em>Batch edit all images</em>.</li>
+	<li><strong>Products list</strong>: row link <em>Image Studio</em> and bulk action <em>Edit images in DEV3 AI Image Studio</em>.</li>
+	<li><strong>Media library</strong>: <em>Open in DEV3 AI Image Studio</em> in the attachment details.</li>
+</ul>
+
+<h2 id="front">Before &amp; After block and shortcode</h2>
+<p>Add the <strong>Before &amp; After Image</strong> block (Media category), pick two images, labels, start position and caption. Or use the shortcode:</p>
+<pre><code>[dev3is_compare before="123" after="456" position="50" before_label="Phone photo" after_label="Studio" caption="Same mug"]</code></pre>
+<p>It loads ~1 KB of JS and ~3 KB of CSS only on pages that use it, works with mouse, touch and keyboard, and inherits your theme's fonts. Colours are CSS custom properties: <code>--dev3is-line</code>, <code>--dev3is-knob</code>, <code>--dev3is-tag-bg</code>, <code>--dev3is-tag-fg</code>, <code>--dev3is-frame-bg</code>, <code>--dev3is-radius</code>.</p>
+
+<h2 id="settings">Settings</h2>
+<table>
+<tr><th>Setting</th><th>Default</th></tr>
+<tr><td>Default background colour</td><td>#ffffff</td></tr>
+<tr><td>File format (auto = PNG when transparent, else JPEG; JPEG, PNG, WebP)</td><td>auto</td></tr>
+<tr><td>JPEG / WebP quality</td><td>90</td></tr>
+<tr><td>Pack shot fill %</td><td>85</td></tr>
+<tr><td>Max image size</td><td>2048 px</td></tr>
+<tr><td>Low-resolution threshold</td><td>800 px</td></tr>
+<tr><td>Soft shadow on pack shots</td><td>on</td></tr>
+<tr><td>Default approve action</td><td>Replace in product</td></tr>
+<tr><td>Default batch images</td><td>Featured image</td></tr>
+<tr><td>Hide unapproved results from the media library</td><td>on</td></tr>
+<tr><td>Keep files of rejected results</td><td>off</td></tr>
+<tr><td>Brand style for scenes, alt template, alt language</td><td>empty, <code>{product} - {category}</code>, site language</td></tr>
+</table>
+<p>Who can use it: users with <code>manage_woocommerce</code> + <code>upload_files</code> (administrators and shop managers). Settings, API Config and Usage Logs need <code>manage_options</code>.</p>
+
+<h2 id="hooks">Hooks</h2>
+<table>
+<tr><th>Hook</th><th>Type</th><th>Use</th></tr>
+<tr><td><code>dev3is_studio_capability</code></td><td>filter</td><td>Capability for the studio (default <code>manage_woocommerce</code>).</td></tr>
+<tr><td><code>dev3is_operation_prompt</code></td><td>filter</td><td>(prompt, op, options, product_id) Prompt sent to the image model.</td></tr>
+<tr><td><code>dev3is_scene_presets</code> / <code>dev3is_recipes_defaults</code></td><td>filter</td><td>Built-in scenes / recipes.</td></tr>
+<tr><td><code>dev3is_result_filename</code></td><td>filter</td><td>(name, product_id, op) File name of new results.</td></tr>
+<tr><td><code>dev3is_audit_low_res</code></td><td>filter</td><td>Low-resolution threshold in px.</td></tr>
+<tr><td><code>dev3is_alt_template_vars</code></td><td>filter</td><td>(vars, product_id) Template placeholders.</td></tr>
+<tr><td><code>dev3is_chroma_tolerance</code></td><td>filter</td><td>Colour distance keyed out for transparent backgrounds (default 110).</td></tr>
+<tr><td><code>dev3is_max_input_side</code></td><td>filter</td><td>Longest side of the photo sent to the AI (default 1536).</td></tr>
+<tr><td><code>dev3is_prompt_alt_text</code>, <code>dev3is_prompt_scene_ideas</code></td><td>filter</td><td>Text prompt templates.</td></tr>
+<tr><td><code>dev3is_result_created</code>, <code>dev3is_result_approved</code> (result, mode), <code>dev3is_result_rejected</code>, <code>dev3is_result_reverted</code></td><td>action</td><td>Workflow events.</td></tr>
+<tr><td><code>dev3is_job_finished_dev3is_batch</code></td><td>action</td><td>A batch finished.</td></tr>
+<tr><td>Core hooks</td><td>filter</td><td>Shared AI core hooks: <code>dev3is_ai_guard</code>, <code>dev3is_model_prices</code>, <code>dev3is_privacy_policy_text</code>.</td></tr>
+</table>
+
+<h2 id="rest">REST API (<code>/wp-json/dev3is/v1</code>, cookie auth + nonce)</h2>
+<table>
+<tr><th>Route</th><th>Purpose</th></tr>
+<tr><td><code>GET bootstrap</code></td><td>Settings, recipes, stats, counts, AI status</td></tr>
+<tr><td><code>GET images</code>, <code>GET images/&lt;id&gt;</code></td><td>Library (filter, search, category, scope, page) / one image with history</td></tr>
+<tr><td><code>POST process</code></td><td>Run an edit: attachment_id, product_id, slot, operation, options or recipe</td></tr>
+<tr><td><code>POST alt/suggest</code>, <code>alt/apply</code>, <code>alt/template</code></td><td>Alt text draft / save / template preview or apply</td></tr>
+<tr><td><code>POST scenes/ideas</code></td><td>AI scene suggestions for a product</td></tr>
+<tr><td><code>GET results</code>; <code>POST results/&lt;id&gt;/approve|reject|revert</code>; <code>POST results/bulk</code></td><td>Review queue</td></tr>
+<tr><td><code>POST batch</code> (<code>dry_run</code> to count), <code>GET batches</code>, core <code>GET jobs/&lt;id&gt;</code></td><td>Batches</td></tr>
+<tr><td><code>POST recipes</code>, <code>POST recipes/reset</code></td><td>Recipes and scenes</td></tr>
+</table>
+
+<h2 id="faq">FAQ</h2>
+<h3>Are my originals changed?</h3>
+<p>Never. Results are new files; approval only changes which attachment the product uses.</p>
+<h3>Why is the AI result about 1024 px?</h3>
+<p>Image models return roughly one megapixel. Pack shots and upscales are resized on your server to the size you choose (up to <em>Max image size</em>).</p>
+<h3>The batch seems slow.</h3>
+<p>Each AI edit takes 10-30 seconds. Batches run in the background; if WP-Cron is disabled they still advance while the batch screen is open.</p>
+<h3>"AI paused: monthly budget reached"</h3>
+<p>Raise or clear the budget in API Config, or wait for the next month.</p>
+<h3>Which data leaves my site?</h3>
+<p>Only for AI edits: the image (max 1536 px) and product name; for alt text also category and attributes. Turn on PII masking in API Config to mask emails/phone numbers in prompts.</p>
+<h3>Uninstall</h3>
+<p>With <em>Delete data on uninstall</em> on (API Config), the results table, settings and recipes are removed. Result images in the media library are kept because products may use them.</p>
+
+<h2 id="changelog">Changelog</h2>
+<p><strong>1.0.0</strong> · Initial release.</p>
+</main>
+</body>
+</html>

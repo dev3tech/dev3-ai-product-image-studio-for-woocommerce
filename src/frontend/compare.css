@@ -1,0 +1,158 @@
+/* Before & After Image (storefront). Theme-friendly: inherits fonts, colours via custom properties. */
+.dev3is-compare:not(#dev3is-x) {
+	--dev3is-line: #fff;
+	--dev3is-knob: #fff;
+	--dev3is-arrow: #1e1e1e;
+	--dev3is-tag-bg: rgba(20, 20, 20, 0.72);
+	--dev3is-tag-fg: #fff;
+	--dev3is-radius: 8px;
+	--dev3is-focus: currentColor;
+	--dev3is-frame-bg: #fff;
+	position: relative;
+	margin: 0 auto 1.5em;
+	padding: 0;
+	width: 100%;
+	max-width: min(100%, 800px);
+}
+
+.dev3is-compare.alignwide:not(#dev3is-x),
+.dev3is-compare.alignfull:not(#dev3is-x) {
+	max-width: none;
+}
+
+.dev3is-compare.aligncenter:not(#dev3is-x) {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__frame {
+	position: relative;
+	width: 100%;
+	aspect-ratio: var(--dev3is-ratio, 1);
+	overflow: hidden;
+	border-radius: var(--dev3is-radius);
+	background: var(--dev3is-frame-bg);
+	touch-action: pan-y;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	object-fit: contain;
+	display: block;
+	pointer-events: none;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__before {
+	position: absolute;
+	inset: 0;
+	background: var(--dev3is-frame-bg);
+	clip-path: inset(0 calc(100% - var(--dev3is-pos, 50%)) 0 0);
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__handle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: var(--dev3is-pos, 50%);
+	width: 2px;
+	margin-left: -1px;
+	background: var(--dev3is-line);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+	pointer-events: none;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__knob {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 44px;
+	height: 44px;
+	margin: -22px 0 0 -22px;
+	border-radius: 50%;
+	background: var(--dev3is-knob);
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__knob::before,
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__knob::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+	border: 6px solid transparent;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__knob::before {
+	left: 6px;
+	border-right-color: var(--dev3is-arrow);
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__knob::after {
+	right: 6px;
+	border-left-color: var(--dev3is-arrow);
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__tag {
+	position: absolute;
+	top: 10px;
+	padding: 3px 10px;
+	border-radius: 4px;
+	background: var(--dev3is-tag-bg);
+	color: var(--dev3is-tag-fg);
+	font-size: 0.8125rem;
+	line-height: 1.4;
+	pointer-events: none;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__tag--before {
+	left: 10px;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__tag--after {
+	right: 10px;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__range {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	opacity: 0;
+	cursor: ew-resize;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__frame:focus-within {
+	outline: 2px solid var(--dev3is-focus);
+	outline-offset: 3px;
+}
+
+.dev3is-compare:not(#dev3is-x) .dev3is-compare__caption {
+	margin-top: 0.5em;
+	font-size: 0.875em;
+	text-align: center;
+	opacity: 0.85;
+}
+
+.dev3is-compare-missing:not(#dev3is-x) {
+	padding: 1em;
+	border: 1px dashed currentColor;
+	opacity: 0.7;
+}
